@@ -6,7 +6,7 @@ This repository implements the backend API for the BoltBuddy application, provid
 
 ### Prerequisites
 
-- Node.js (version 13 or later)
+- Node.js (version 20 or later)
 - npm (or yarn) package manager
 
 ### Installation
