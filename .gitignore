@@ -1,15 +1,37 @@
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
+# Dependencies
+node_modules
 
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
+# Build Output
+dist
+build
+out
 
-# System files
+# Test Coverage Reports
+coverage
+
+# IDE Specific Files
+.idea
+.vscode
+
+# OS Specific Temporary Files
+.DS_Store
+Thumbs.db
+
+# Version Control Metadata
+.gitattributes
+.gitignore
+.gitmodules
+
+# Local Environment Variables
 .env
+
+# Logs
+*.log
+
+# Npm Lock Files
+package-lock.json
+
+# Yarn Lock Files
+yarn.lock
+
+# Any other files or folders you want to exclude
