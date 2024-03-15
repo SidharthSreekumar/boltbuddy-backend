@@ -8,6 +8,11 @@ const router = express.Router();
 
 const cache = apicache.middleware;
 
+/**
+ * Get weather data from OpenWeatherMap
+ *
+ * URL query params: lat: number, lon: number, units: string
+ */
 router.get("/", cache("2 minutes"), async (req, res) => {
   // Environment variables
   const OWM_API_KEY = process.env.OWM_API_KEY;
@@ -38,5 +43,12 @@ router.get("/", cache("2 minutes"), async (req, res) => {
     res.status(500).json({ error });
   }
 });
+
+/**
+ * Health check
+ */
+router.get("/healthcheck", (req, res) => {
+  res.status(200).send("Server is alive!");
+})
 
 export default router;
