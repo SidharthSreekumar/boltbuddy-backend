@@ -32,5 +32,6 @@ This repository implements the backend API for the BoltBuddy application, provid
    You can access the API endpoints at http://localhost:5000/api/<endpoint>.
    Replace <endpoint> with the specific API endpoint you want to use (e.g., /weather).
 
+Note: Make sure to add a .env file for local development using template from .env.local
 Author
 Sidharth Sreekumar [Github](https://github.com/SidharthSreekumar)
