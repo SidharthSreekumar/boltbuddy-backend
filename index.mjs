@@ -35,11 +35,24 @@ const limiter = rateLimit({
 app.use(limiter);
 app.set("trust proxy", 1); // trust first proxy
 
+// Enable CORS
+if (process.env.PRODUCTION === 'FALSE') {
+  logger.info('Running in development mode');
+  app.use(cors({
+    origin: 'http://localhost:4200'
+  }));
+} else {
+  logger.info("Running in production mode");
+  app.use(
+    cors({
+      origin: "https://boltbuddy.netlify.app",
+    })
+  );
+}
+
 // Routes
 app.use("/api", routes);
 
-// Enable CORS
-app.use(cors());
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
